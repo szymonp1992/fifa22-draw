@@ -1,8 +1,7 @@
 const selectLevel1 = document.getElementById('country')
-
 const selectLevel2 = document.getElementById('league')
 
-const data = [
+const countryLeaguePairs = [
     ["England", "Premier League"],
     ["England", "Championship"],
     ["England", "League One"],
@@ -15,7 +14,7 @@ const data = [
 ]
 
 const uniqueOptions1 = new Set();
-data.forEach(r => uniqueOptions1.add(r[0]))
+countryLeaguePairs.forEach(r => uniqueOptions1.add(r[0]))
 
 const uniqueList1 = [...uniqueOptions1]
 
@@ -31,7 +30,7 @@ const populateLevel2 = () => {
     selectLevel2.innerHTML = `<option value="">Any</option>`
     selectLevel2.style.backgroundColor = "var(--element-color)";
     const level1 = selectLevel1.value;
-    const filteredArray = data.filter(r => r[0].toLowerCase() === level1)
+    const filteredArray = countryLeaguePairs.filter(r => r[0].toLowerCase() === level1)
     const uniqueOptions2 = new Set();
     filteredArray.forEach(r => uniqueOptions2.add(r[1]))
     const uniqueList2 = [...uniqueOptions2]
