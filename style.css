@@ -76,6 +76,7 @@ label:hover ~ input:checked ~ label /* highlight previous selected stars */ { co
 /* SETUP FOR DROPDOWNS */
 
 select {
+    width: 75%;
     margin: 0.5rem;
     background-color: var(--element-color);
     font-size: 1rem;
@@ -84,11 +85,17 @@ select {
     font-family: Roboto, Arial, sans-serif;
 }
 
+select option {
+    text-align: center;
+}
+
+
+
+/* SETUP FOR NATIONAL TEAM CHECKBOX */
+
 label.national-team h2 {
     display: inline;
 }
-
-/* SETUP FOR NATIONAL TEAM CHECKBOX */
 
 .checkbox label {
     color: white;
