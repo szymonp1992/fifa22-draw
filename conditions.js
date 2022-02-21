@@ -22,11 +22,3 @@ class Conditions {
 const conditions = new Conditions()
 
 
-const getRating = function () {
-    const ratings = [...document.querySelectorAll('[name="rating"]')];
-    for (let i = 0; i < ratings.length; i++) {
-        if (ratings[i].checked === true) {
-            return ratings[i].value / 2;
-        }
-    }
-};

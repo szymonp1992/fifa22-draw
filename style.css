@@ -114,3 +114,36 @@ label.national-team h2 {
 input[type="checkbox"] { /* change "blue" browser chrome to yellow */
     filter: invert(220%) hue-rotate(18deg) brightness(1.7);
   }
+
+/* Draw button styling */
+
+.drawBtn {
+    margin: 20px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--hover-color);
+    /* font-weight: bold; */
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+.drawBtn:hover {
+    cursor: pointer;
+}
+
+/* Previous draws styling */
+
+#previous-draws {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#previous-draws div {
+    width: 30%;
+    background-color: red;
+    margin: 0.5rem;
+}
