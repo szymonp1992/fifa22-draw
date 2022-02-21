@@ -4,25 +4,22 @@ class Statistics {
         this.numberOfDraws = 0
     }
     addDrawToStatistics(team, country, league, stats) {
-        this.drawnTeams.push([team, country, league, stats]);
-    }
-    displayPreviousDraw(team, country, league, stats) {
+        this.drawnTeams.push({ team, country, league, stats });
         this.numberOfDraws += 1;
+    }
+    displayPreviousDraw() {
         const previousDrawsContainer = document.getElementById('previous-draws')
+        const previousDraw = document.createElement('div');
+        previousDraw.classList.add('previous-draw')
+        previousDraw.innerHTML = `
+        <p>${this.drawnTeams[this.numberOfDraws - 1].team}</p>
+        <p>${this.drawnTeams[this.numberOfDraws - 1].country}</p>
+        <p>${this.drawnTeams[this.numberOfDraws - 1].league}</p>
+        <p>${this.drawnTeams[this.numberOfDraws - 1].stats}</p>`
+        previousDrawsContainer.prepend(previousDraw);
         if (this.numberOfDraws > 2) {
             previousDrawsContainer.lastChild.remove();
         }
-        const previousDraw = document.createElement('div');
-        previousDraw.classList.add('previous-draw')
-        previousDraw.style.display = 'flex'
-        previousDraw.style.alignItems = 'center';
-        previousDraw.style.flexDirection = 'column';
-        previousDraw.innerHTML = `
-        <p>${team}</p>
-        <p>${country}</p>
-        <p>${league}</p>
-        <p>${stats}</p>`
-        previousDrawsContainer.prepend(previousDraw);
     }
 }
 

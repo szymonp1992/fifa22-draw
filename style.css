@@ -134,7 +134,7 @@ input[type="checkbox"] { /* change "blue" browser chrome to yellow */
 
 /* Previous draws styling */
 
-#previous-draws {
+.previous-draws {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -142,8 +142,12 @@ input[type="checkbox"] { /* change "blue" browser chrome to yellow */
     justify-content: center;
 }
 
-#previous-draws div {
+.previous-draw {
     width: 30%;
     background-color: red;
     margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
