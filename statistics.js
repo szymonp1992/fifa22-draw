@@ -17,10 +17,9 @@ class Statistics {
         <p>${this.drawnTeams[this.numberOfDraws - 1].league}</p>
         <p>${this.drawnTeams[this.numberOfDraws - 1].stats}</p>`
         previousDrawsContainer.prepend(previousDraw);
-        if (this.numberOfDraws > 2) {
+        if (this.numberOfDraws > 3) {
             previousDrawsContainer.lastChild.remove();
         }
     }
 }
 
-const stats = new Statistics();

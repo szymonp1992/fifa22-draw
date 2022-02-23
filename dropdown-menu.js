@@ -55,7 +55,6 @@ const changeSelectColor = (e) => {
 
 const automaticCheck = (e) => {
     if (e.target.value) {
-        console.log(e.target)
         nationalCheckbox.checked = true;
     }
     if (e.target.value === selectLevel1.value && e.target.value === "") {

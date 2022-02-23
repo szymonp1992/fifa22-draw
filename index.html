@@ -12,7 +12,7 @@
 <body>
     <div class="stars">
         <!-- STARS -->
-        <h1>Wybierz liczbę gwiazdek</h1>
+        <h2>Choose rating</h2>
         <fieldset class="rate">
             <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10" title="5 stars"></label>
             <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9"
@@ -33,12 +33,14 @@
     </div>
     <!-- COUNTRY DROPDOWN -->
     <div class="dropdown">
+        <h2>Choose country</h2>
         <select name="" id="country">
             <!-- Populating via dropdown-menu.js -->
         </select>
     </div>
     <!-- LEAGUE DROPDOWN -->
     <div class="dropdown">
+        <h2>Choose league</h2>
         <select name="" id="league">
             <!-- Populating via dropdown-menu.js -->
         </select>
@@ -48,7 +50,10 @@
         <input type="checkbox" id="national" name="national">
         <label for="national-team">Exclude national teams</label>
     </div>
-    <button class="drawBtn">Losuj!</button>
+    <button id="drawBtn">Draw</button>
+    <div class="error-message">
+        <p>There is no team meeting your criteria. Change them and try again.</p>
+    </div>
     <div class="previous-draws" id="previous-draws">
     </div>
     <!-- SCRIPTS -->
@@ -57,8 +62,8 @@
     <script src="teams.js"></script>
     <script src="team-parameters.js"></script>
     <script src="conditions.js"></script>
-    <script src="draw.js"></script>
     <script src="statistics.js"></script>
+    <script src="draw.js"></script>
     <script src="app.js"></script>
 </body>
 

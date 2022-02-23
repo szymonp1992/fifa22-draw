@@ -14,7 +14,7 @@ class TeamParameters {
     }
     getNationalTeam() {
         const nationalTeamCheckbox = document.getElementById('national');
-        return nationalTeamCheckbox.checked;
+        return !nationalTeamCheckbox.checked;
     }
     getRating() {
         const ratings = [...document.querySelectorAll('[name="rating"]')];
