@@ -1,6 +1,7 @@
 const selectLevel1 = document.getElementById('country')
 const selectLevel2 = document.getElementById('league')
 const nationalCheckbox = document.getElementById('national')
+const nationalCheckboxlabel = document.getElementById('exclude-national-label')
 
 const countryLeaguePairs = [
     ["England", "Premier League"],
@@ -62,11 +63,15 @@ const automaticCheck = (e) => {
     }
 }
 
+const removeConditions = () => {
+    populateLevel1();
+    populateLevel2();
+    selectLevel1.style.backgroundColor = "var(--element-color)"
+}
+
 const automaticUncheck = (e) => {
     if (!e.target.checked) {
-        populateLevel1();
-        populateLevel2();
-        selectLevel1.style.backgroundColor = "var(--element-color)"
+        removeConditions();
     };
 }
 
@@ -79,3 +84,11 @@ selectLevel2.addEventListener("change", changeSelectColor);
 selectLevel1.addEventListener("change", automaticCheck);
 selectLevel2.addEventListener("change", automaticCheck);
 nationalCheckbox.addEventListener("change", automaticUncheck)
+nationalCheckboxlabel.addEventListener("click", () => {
+    if (nationalCheckbox.checked) {
+        nationalCheckbox.checked = false;
+        removeConditions();
+    } else {
+        nationalCheckbox.checked = true;
+    }
+})
