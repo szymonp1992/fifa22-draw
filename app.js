@@ -16,8 +16,8 @@ const drawTeam = () => {
     } else {
         document.querySelector('.error-message').style.display = 'none';
     }
-    stats.addDrawToStatistics(drawnTeam[0], drawnTeam[1], drawnTeam[2], drawnTeam[4])
-    stats.displayPreviousDraw();
+    stats.addDrawToStatistics(drawnTeam[0], drawnTeam[1], drawnTeam[2], drawnTeam[4], drawnTeam[5])
+    window.setTimeout(stats.displayPreviousDraw.bind(stats), 500);
 }
 
 drawBtn.addEventListener('click', drawTeam);
